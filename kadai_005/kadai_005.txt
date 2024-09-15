@@ -1,0 +1,64 @@
+PS C:\Users\user\Desktop\lesson> cd C:\Users\user\Documents
+PS C:\Users\user\Documents> mkdir git_challenge       
+
+
+    ディレクトリ: C:\Users\user\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2024/09/16      1:05                git_challenge
+
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\user\Documents> cd git_challenge
+PS C:\Users\user\Documents\git_challenge> git init
+Initialized empty Git repository in C:/Users/user/Documents/git_challenge/.git/
+PS C:\Users\user\Documents\git_challenge> git add .
+PS C:\Users\user\Documents\git_challenge> git status[
+git: 'status[' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+PS C:\Users\user\Documents\git_challenge> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello_world.txt
+
+PS C:\Users\user\Documents\git_challenge> git commit -m "hello_world.txtを追加"
+[main (root-commit) 4cefd94] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+PS C:\Users\user\Documents\git_challenge> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\user\Documents\git_challenge> git add .
+PS C:\Users\user\Documents\git_challenge> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello_world.txt
+
+PS C:\Users\user\Documents\git_challenge> git commit -m "日本語訳を追記"       
+[main 68cce64] 日本語訳を追記
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\user\Documents\git_challenge> git log
+commit 68cce645a8d7a34a58c8d1b223e43a8b7a01b5f9 (HEAD -> main)
+Author: hayato-nakata <balcerona4510@gmail.com>
+Date:   Mon Sep 16 01:14:02 2024 +0900
+
+    日本語訳を追記
+
+commit 4cefd944141291b57655328e914e74759fc904a2
+Author: hayato-nakata <balcerona4510@gmail.com>
+Date:   Mon Sep 16 01:11:17 2024 +0900
+
+    hello_world.txtを追加
+PS C:\Users\user\Documents\git_challenge> git log --oneline
+68cce64 (HEAD -> main) 日本語訳を追記
+4cefd94 hello_world.txtを追加
+PS C:\Users\user\Documents\git_challenge> 
